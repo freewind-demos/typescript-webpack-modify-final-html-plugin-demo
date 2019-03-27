@@ -3,6 +3,8 @@ TypeScript Webpack Modify Final Html Code Plugin Demo
 
 如何写一个webpack的plugin，可以对最终生成的html内的代码进行修改。
 
+注：WebpackModifyFinalHtmlPlugin依赖于HtmlWebpackPlugin
+
 ```
 npm install
 npm run demo
