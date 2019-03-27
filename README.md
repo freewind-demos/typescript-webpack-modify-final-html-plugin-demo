@@ -1,24 +1,14 @@
-JavaScript Webpack Custom Plugin Demo
-=====================================
+TypeScript Webpack Modify Final Html Code Plugin Demo
+=====================================================
 
-Webpack的plugin看起来还有点复杂，这里的例子只是一个最简单的Hello World。
-
-如果想写一些更复杂的例子，还需要理解webpack的`compiler`和`compilation`。
+如何写一个webpack的plugin，可以对最终生成的html内的代码进行修改。
 
 ```
 npm install
 npm run demo
 ```
 
-将输出:
-
-```
-========= HelloWorldPlugin ==========
-Hello, webpack!
--------------------------------------
-```
-
-说明我们的Plugin被成功调用。
+然后看`dist`目录下生成的`index.html`文件。
 
 Resources
 ---------
