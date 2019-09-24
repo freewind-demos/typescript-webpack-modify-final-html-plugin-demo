@@ -35,14 +35,14 @@ export default class WebpackModifyFinalHtmlPlugin {
       return;
     }
     compiler.hooks.compilation.tap(ThisPluginName, (compilation: compilation.Compilation) => {
-      try {
-        (compilation.hooks as any)['htmlWebpackPluginAfterHtmlProcessing'].tap(ThisPluginName, (pluginArgs: any) => {
+      (compilation.hooks as any)['htmlWebpackPluginAfterHtmlProcessing'].tap(ThisPluginName, (pluginArgs: any) => {
+        try {
           const assetSources = getAssetSources(compilation);
           pluginArgs.html = this.modify(pluginArgs.html, assetSources);
-        });
-      } catch (error) {
-        compilation.errors.push(error);
-      }
+        } catch (error) {
+          compilation.errors.push(error);
+        }
+      });
     });
   }
 
